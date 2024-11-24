@@ -1,0 +1,249 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+ 
+body {
+  font-family: 'Quicksand', sans-serif;
+ 
+  height: 100%;
+  margin: 0;
+ 
+  display: flex;
+  flex-direction: column;
+}
+ 
+header.navbar-container {
+  width: 100%;
+  max-width: 1200px;
+  padding-block: 1rem;
+  margin-inline: auto;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+ 
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  background-color: white;
+}
+ 
+header.navbar-container .logo img {
+  width: 300px;
+}
+ 
+header.navbar-container .nav-list ul {
+  padding-left: 0;
+ 
+  display: flex;
+  justify-content: center;
+  gap: 2rem 1rem;
+}
+ 
+header.navbar-container .nav-list li {
+  list-style-type: none;
+}
+ 
+header.navbar-container .nav-list li a {
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+ 
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: black;
+ 
+  transition: all 0.2s ease-in-out;
+}
+ 
+header.navbar-container .nav-list li:hover a {
+  background-color: #674B20;
+  color: white;
+}
+
+main {
+    flex: 1;
+   
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 4rem;
+   
+    display: block;
+    align-items: center;
+  }
+
+  article, aside {
+    flex: 1;
+    margin-bottom: 2rem; /* Jarak antar artikel dan aside */
+    padding: 1rem;
+    background-color: #e0bf79;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+   
+}
+   
+  main .content {
+    flex: 1;
+   
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 2rem;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+   
+    padding: 20px;
+  }
+   
+  main .content .card {
+    flex: 1 1;
+  }
+   
+  main .content .card h1 {
+    margin-block: 1rem;
+   
+    font-size: 3.5rem;
+  }
+   
+  main .content .card p {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+  }
+   
+  main .content .content-image {
+    flex: 1;
+   
+    display: flex;
+  }
+   
+  main .content .content-image img {
+    width: 300px; 
+    min-width: 250px; 
+    margin: auto;
+  }
+
+  .section-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem; 
+    margin-bottom: 2rem; 
+  }
+  .section-item {
+    display: flex;
+    flex: 1;
+    gap: 1rem; 
+    flex-wrap: wrap;
+  }
+  .section-item p {
+    flex: 1;
+  }
+  .section-item .content-image {
+    flex-shrink: 0;
+    width: 40%;
+  }
+
+  .section-item img {
+    width: 100%;
+    height: auto;
+  }
+
+  aside {
+    background-color: #e0bf79;
+}
+
+.news-item {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.news-item img {
+  width: 300px; 
+  min-width: 250px; 
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+  footer {
+    padding: 3px;
+    color: white;
+    background-color: #674B20;
+   
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+ /* Medium devices (768px dan di bawahnya) */
+@media screen and (max-width: 768px) {
+    header.navbar-container {
+      flex-direction: column;
+    }
+   
+    header.navbar-container .nav-list ul {
+      flex-wrap: wrap;
+      column-gap: 0.5rem;
+    }
+   
+    main {
+      padding: 1rem 3rem;
+    }
+   
+    main .content {
+      flex-direction: column;
+      gap: 2rem;
+    }
+   
+    main .content .card h1 {
+      font-size: 3rem;
+    }
+   
+    main .content .card p {
+      font-size: 1rem;
+    }
+   
+    main .content .content-image {
+      order: -1;
+      width: 100px;
+    }
+
+    article, aside {
+        margin-bottom: 1rem;
+    }
+
+
+    .section-item {
+        flex-direction: column;
+    }
+    .section-item .content-image {
+        width: 100%;
+    }
+  }
